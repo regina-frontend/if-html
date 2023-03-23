@@ -13,15 +13,16 @@
 .title {
     text-align: left;
     margin-left: 470px;
-    margin-bottom: 110px;
+    margin-bottom: 20px;
     font-style: normal
 }
 .stroke{
     margin-bottom: 100px;
     margin-left: 540px;
-    display: inline-block;
     width: 100px;
     height: 4px;
+    background: #F5BD41;
+    border: none;
 }
 .row {
     margin:0;
@@ -42,7 +43,7 @@
 }
 
 .review-image1 {
-    margin: 32px 0;
+    margin: 28px 0;
     width: 80px;
     height: 90px;
 }
