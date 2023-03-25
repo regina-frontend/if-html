@@ -1,3 +1,5 @@
+@import url('./fonts.css');
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -5,20 +7,27 @@
 }
 
 .container {
+    font-family: 'Roboto',sans-serif;
     width: 1440px;
     margin: 0 auto;
     padding: 120px 100px;
 }
 
 .title {
-    text-align: left;
-    margin-left: 470px;
+    text-align: center;
     margin-bottom: 20px;
-    font-style: normal
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 500;
+}
+.title-stroke{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .stroke{
     margin-bottom: 100px;
-    margin-left: 540px;
     width: 100px;
     height: 4px;
     background: #F5BD41;
@@ -65,13 +74,96 @@
 
 .review-title {
     margin-bottom: 10px;
-    font-family: 'sans-serif';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
+    text-align: center;
 }
 
 .-text {
     color: #383838;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    align-content: center;
+    background: #10367C;
+    height: 630px;
+    width: 1440px;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 120px;
+    margin-left: 104px;
+}
+.about{
+    line-height: 23px;
+    text-align: left;
+    width: 211px;
+    height: 190px;}
+.style1{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.style2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.style3{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+
+}
+
+.property{
+    font-family: 'Roboto',sans-serif;
+    margin-left: 223px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: left;
+    color: #FFFFFF;
+    width: 133px;
+    height: 305px;
+}
+.support{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    margin-left: 283px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: left;
+    width: 230px;
+    height: 117px;
+
+    color: #FFFFFF;
+}
+.end{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 105px;
+    margin-top: 158px;
 }
