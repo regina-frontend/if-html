@@ -38,7 +38,7 @@
 }
 
 .col {
-    display: inline-block;
+    display: flex;
     float: left;
     width: 300px;
     height: 180px;
@@ -46,7 +46,6 @@
 
 .review {
     margin: 0;
-    /*margin-bottom: 120px;*/
     text-align: center;
     border-radius: 8px;
 }
@@ -94,10 +93,6 @@
     background: #10367C;
     height: 630px;
     width: 1440px;
-    font-family: 'Roboto',sans-serif;
-    font-style: normal;
-    font-weight: 400;
-
 }
 .content{
     display: flex;
@@ -106,64 +101,51 @@
     margin-left: 104px;
 }
 .about{
-    line-height: 23px;
     text-align: left;
     width: 211px;
-    height: 190px;}
+    height: 190px;
+    margin-bottom: 158px;
+}
+.property{
+    margin-left: 223px;
+    text-align: left;
+    width: 133px;
+    height: 305px;
+}
+.support{
+    margin-left: 285px;
+    line-height: 23px;
+    text-align: left;
+    width: 230px;
+    height: 117px;
+}
+.end{
+    line-height: 23px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-left: 105px;
+}
 .style1{
+    font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 43px;
     color: #FFFFFF;
+    font-family: 'Roboto',sans-serif;
 }
 .style2 {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 43px;
     color: #FFFFFF;
+    font-family: 'Roboto',sans-serif;
 }
 .style3{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #FFFFFF;
-
-}
-
-.property{
-    font-family: 'Roboto',sans-serif;
-    margin-left: 223px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: left;
-    color: #FFFFFF;
-    width: 133px;
-    height: 305px;
-}
-.support{
-    font-family: 'Roboto',sans-serif;
-    font-style: normal;
-    margin-left: 283px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: left;
-    width: 230px;
-    height: 117px;
-
-    color: #FFFFFF;
-}
-.end{
-    font-family: 'Roboto',sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    color: #FFFFFF;
-    margin-left: 105px;
-    margin-top: 158px;
 }
