@@ -5,7 +5,217 @@
     box-sizing: border-box;
     color: #333333;
 }
+.top-section{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex: border-box;
+    align-content: center;
+    width: 1440px;
+    min-height: 900px;
+    background:url("../images/castl.png");
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    height: 40px;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 104px;
+    margin-top: 51px;
+    height: 40px;
+    width: 205px;
+}
+.stays{
+    color: #ffffff;
+    text-align: end;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    flex: content;
+    margin-top: 57px;
+    margin-left: 684px;
+}
+.line{
+    display: flex;
+    margin-top: 48px;
+    margin-left: 998px;
+    width: 50px;
+    height: 2px;
+}
+.staysline{
+    width: 50px;
+    height: 2px;
+    background: #F5BD41;
+    border: none;
+}
+.attractions{
+    display: flex;
+    flex: content;
+    margin-top: 57px;
+    margin-left: 24px;
+    color: #ffffff;
+    text-align: end;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    width: 118px;
+    height: 28px;
+}
+.home{
+    margin-right: 104px;
+    margin-top: 51px;
+    display: flex;
+    height: 40px;
+    width: 40px;
+}
+.light{
+    margin-right: 24px;
+    margin-top: 56px;
+    display: flex;
+    height: 30px;
+    width: 30px;
+}
+.disc{
+    display: flex;
+    margin-top: 202px;
+    margin-left: 104px;
+    width:542px;
+    height :118px;
 
+}
+.discover{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 59px;
+    color: #ffffff;
+}
+.section{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 128px;
+    flex-direction: row;
+    gap: 221px;
+    height: 21px;
+    width: 962px;
+}
+.section1{
+    flex-direction: row;
+    display: flex;
+    text-align: left;
+    width: 246px;
+
+}
+.section2{
+   display: flex;
+    flex-direction: row;
+    width: 183px;
+    text-align: left;
+}
+.info{
+    flex-direction: row;
+    color: #ffffff;
+    text-align: end;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.inputs{
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    height: 64px;
+    width: 1223px;
+    margin-left: 104px;
+    border-radius: 8px;
+    border: medium;
+}
+.input1{
+    width: 467px;
+    height: 64px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    border: medium;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.input2{
+    width: 259px;
+    height: 64px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    border-color: #F5BD41;
+    border-width: 3px;
+}
+.input3{
+    width: 320px;
+    height: 64px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    border: medium;
+
+}
+.search{
+    width: 192px;
+    height: 64px;
+    text-align: center;
+    background:  #3077C6;
+    border: medium;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.sear{
+    margin-top: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    background:  #3077C6 ;
+    border: medium;
+    border-radius: 8px;
+}
+.makespiteinnexttime{
+    display: flex;
+    flex-direction: row;
+    height: 39px;
+    width: 269px;
+    margin-left: 585px;
+    margin-top: 120px;
+}
+.apple{
+    width: 118px;
+    margin-left: 18px;
+}
+.google{
+    width: 135px;
+}
 .container {
     font-family: 'Roboto',sans-serif;
     width: 1440px;
