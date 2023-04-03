@@ -40,6 +40,11 @@
     height: 40px;
     width: 205px;
 }
+.svg-sprite{
+     position:absolute;
+    visibility:hidden;
+    width: 0;
+    height: 0;}
 
 .stays {
     color: #ffffff;
@@ -70,7 +75,7 @@
     display: flex;
     height: 40px;
     width: 40px;
-    padding-left: 20px;
+    margin-left: 25px;
 }
 
 .light {
@@ -218,12 +223,16 @@
 }
 
 .apple {
+    align-items: center;
+    height: 40px;
     width: 118px;
     margin-left: 18px;
 }
 
 .google {
+    align-items: center;
     width: 135px;
+    height: 40px;
 }
 
 .container {
