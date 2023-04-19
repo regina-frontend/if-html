@@ -14,7 +14,7 @@ body{
     flex-direction: column;
     flex: border-box;
     align-content: center;
-    width: 1440px;
+    width: 100%;
     min-height: 900px;
     background: url("../images/castl.png");
 }
@@ -88,10 +88,10 @@ body{
 
 .disc {
     display: flex;
-    margin-top: 202px;
-    margin-left: 104px;
-    width: 542px;
-    height: 118px;
+    margin-top: 200px;
+    margin-left: 105px;
+    width: 540px;
+    height: 120px;
 
 }
 
@@ -100,32 +100,32 @@ body{
     font-style: normal;
     font-weight: 500;
     font-size: 50px;
-    line-height: 59px;
+    line-height: 60px;
     color: #ffffff;
 }
 
 .section {
     display: flex;
     margin-top: 100px;
-    margin-left: 128px;
+    margin-left: 130px;
     flex-direction: row;
-    gap: 221px;
-    height: 21px;
-    width: 962px;
+    gap: 220px;
+    height: 20px;
+    width: 960px;
 }
 
 .destination {
     flex-direction: row;
     display: flex;
     text-align: left;
-    width: 246px;
+    width: 250px;
 
 }
 
 .check {
     display: flex;
     flex-direction: row;
-    width: 183px;
+    width: 185px;
     text-align: left;
 }
 
@@ -141,19 +141,19 @@ body{
 }
 
 .inputs {
-    margin-top: 14px;
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
-    height: 64px;
-    width: 1223px;
-    margin-left: 104px;
+    height: 65px;
+    width: 100%;
+    margin-left: 105px;
+    margin-right: 105px;
     border-radius: 8px;
     border: medium;
-    background: #ffffff;
 }
 .city {
-    width: 469px;
-    height: 64px;
+    width: 470px;
+    height: 65px;
     text-align: left;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -165,8 +165,8 @@ body{
     border-bottom-left-radius: 8px;
 }
 .date {
-    width: 259px;
-    height: 64px;
+    width: 260px;
+    height: 65px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -182,7 +182,7 @@ body{
 }
 .rooms {
     width: 320px;
-    height: 64px;
+    height: 65px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -193,8 +193,8 @@ body{
 
 }
 .search {
-    width: 192px;
-    height: 64px;
+    width: 190px;
+    height: 65px;
     text-align: center;
     background: #3077C6;
     border: medium;
@@ -218,8 +218,8 @@ body{
 .market-place {
     display: flex;
     flex-direction: row;
-    height: 39px;
-    width: 269px;
+    height: 40px;
+    width: 270px;
     margin-left: 585px;
     margin-top: 120px;
 }
@@ -227,8 +227,8 @@ body{
 .apple {
     align-items: center;
     height: 40px;
-    width: 118px;
-    margin-left: 18px;
+    width: 120px;
+    margin-left: 20px;
 }
 
 .google {
@@ -337,19 +337,19 @@ body{
 }
 .-help{
     width: 75px;
-    height: 92px;
+    height: 90px;
 }
 .-connect{
-    width: 83px;
-    height: 83px;
+    width: 85px;
+    height: 85px;
 }
 .-like{
-    width: 92px;
-    height: 83px;
+    width: 90px;
+    height: 85px;
 }
 .-booking{
     width: 100px;
-    height: 67px;
+    height: 70px;
 }
 .review-title {
     font-weight: 400;
@@ -359,7 +359,7 @@ body{
     color: #383838;
 }
 .-sup{
-    padding-top:52px;
+    padding-top:50px;
 }
 .-communication{
     padding-top:60px;
@@ -402,25 +402,25 @@ body{
     align-content: center;
     line-height: 23px;
     color: #FFFFFF;
-    margin-top: 158px;
-    padding-left: 104px;
+    margin-top: 160px;
+    padding-left: 105px;
 }
 
-.style1 {
+.footer__style-second {
     font-weight: 400;
     font-size: 20px;
     line-height: 43px;
     color: #FFFFFF;
 }
 
-.style2 {
+.footer__style-first{
     font-weight: 500;
     font-size: 20px;
     line-height: 43px;
     color: #FFFFFF;
 }
 
-.style3 {
+.footer__style-end {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -433,7 +433,7 @@ body{
         width: 100%;
     }
     .advantages{
-        padding-top: 34px;
+        padding-top: 35px;
         padding-bottom: 40px;
     }
     .title-stroke{
@@ -455,13 +455,13 @@ body{
         line-height: 18px;
     }
     .-sup{
-        padding-top:19px;
+        padding-top:20px;
     }
     .-communication{
-        padding-top:22px;
+        padding-top:25px;
     }
     .-book{
-        padding-top:28px;
+        padding-top:30px;
     }
     .-reviews{
         padding-top: 25px;
@@ -483,36 +483,36 @@ body{
         display: flex;
         align-items: center;
         margin: 40px auto;
-        width: 98px;
-        height: 19px;
+        width: 100px;
+        height: 20px;
     }
     .content{
         display: flex;
         justify-content: center;
         width: 100%;
-        padding-left: 0px;
-        margin-top: 0px;
+        padding-left: 0;
+        margin-top: 0;
 
     }
     .footer{
         align-items: center;
     }
-    .style2{
+    .footer__style-first{
         font-size: 15px;
         line-height: 10px;
     }
     .about{
-        margin-left: 0px;
+        margin-left: 0;
 
     }
     .property{
-        margin-left: 0px;
+        margin-left: 0;
         margin-right: 0;
     }
     .support{
         margin-left: 0;
     }
-    .style3{
+    .footer__style-end {
         font-size: 12px;
     }
     .end {
@@ -527,7 +527,6 @@ body{
     .col-4.property{
         width: 25%;
     }
-
-
+    
 }
 
