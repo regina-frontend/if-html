@@ -94,6 +94,11 @@ body{
     height: 120px;
 
 }
+.menu{
+    display: none;
+    width: 25px;
+    height: 15px;
+}
 
 .discover {
     font-family: 'Roboto', sans-serif;
@@ -180,6 +185,16 @@ body{
     border-width: 3px;
     border-radius: 8px;
 }
+.check{
+    display:none;
+    gap: 8px;
+}
+.check-in{
+    display: none;
+}
+.check-out{
+    display: none;
+}
 .rooms {
     width: 320px;
     height: 65px;
@@ -191,6 +206,12 @@ body{
     line-height: 21px;
     border: medium;
 
+}
+.room{
+    display: none;
+}
+.adult {
+    display: none;
 }
 .search {
     width: 190px;
@@ -431,6 +452,135 @@ body{
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
+    }
+    .attractions {
+        display: none;
+    }
+    .stays{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        width: 25px;
+        height: 15px;
+    }
+    .inputs {
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        height: 240px;
+        width: 330px;
+        border-radius: 0px;
+        border: medium;
+        background-color: #F5BD41;
+        gap: 8px;
+        padding: 8px;
+    }
+    .city{
+        width: 310px;
+        height: 50px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 21px;
+        border: medium;
+        border-radius: 8px;
+    }
+    .date {
+        display: none;
+    }
+    .check{
+        display: flex;
+        flex-direction: row;
+    }
+    .check-in{
+        display: flex;
+        width: 150px;
+        height: 50px;
+        border: medium;
+        border-radius: 8px;
+    }
+    .check-out{
+        display: flex;
+        width: 150px;
+        height: 50px;
+        border: medium;
+        border-radius: 8px;
+    }
+    .rooms{
+        display: none;
+    }
+    .room{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 310px;
+        height: 50px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 14px;
+        background-color: #FFFFFF;
+        border: medium;
+        border-radius: 8px;
+    }
+    .adult{
+        display: flex;
+        width: 104px;
+        height: 40px;
+        border-width: 5px;
+        border-right: #BFBFBF;
+    }
+    .children{
+        display: flex;
+        width: 104px;
+        height: 40px;
+    }
+    .flat{
+        display: flex;
+        width: 104px;
+        height: 40px;
+        border-left: #BFBFBF;
+        border-width: 5px;
+    }
+    .info{
+        display: none;
+    }
+    .market-place {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .header-links{
+        margin-right: 15px;
+    }
+    .section{
+        display: none;
+    }
+    .disc{
+        margin-top: 50px;
+    }
+    .col-5{
+        width: 50%;
+    }
+    .discover {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .search {
+        width: 310px;
+        height: 50px;
+        text-align: center;
+        background: #3077C6;
+        border: medium;
+        border-radius: 8px;
+    }
+    .sear{
+        margin-top: 14px;
+        text-align: center;
+        font-size: 19px;
+        line-height: 23px;
     }
     .advantages{
         padding-top: 35px;
