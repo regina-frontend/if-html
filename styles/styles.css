@@ -1,5 +1,14 @@
 @import url('./fonts.css');
-
+:root{
+    --whight: #ffffff;
+    --black: #000000;
+    --blue: #3077C6;
+    --dark-blue:#10367C;
+    --yellow: #F5BD41;
+    --grey:#BFBFBF;
+    --light-blue:#EAF0F9;
+    --light-grey:#F3F3F4;
+}
 * {
     margin: 0;
     box-sizing: border-box;
@@ -17,8 +26,13 @@ body{
     width: 100%;
     min-height: 900px;
     background: url("../images/castl.png");
+    background-size: cover;
 }
-
+.svg-sprite{
+    position:absolute;
+    visibility:hidden;
+    width: 0;
+    height: 0;}
 .header {
     display: flex;
     flex-direction: row;
@@ -29,8 +43,7 @@ body{
 }
 .header-links{
     display: flex;
-    width: 300px;
-    margin-right: 104px;
+    width: 400px;
     justify-content: space-around;
     align-items: center;
     padding-bottom: 4px;
@@ -38,39 +51,67 @@ body{
 .logo {
     display: flex;
     flex-direction: row;
-    margin-left: 104px;
     height: 40px;
     width: 205px;
 }
-.svg-sprite{
-    position:absolute;
-    visibility:hidden;
-    width: 0;
-    height: 0;}
 
 .stays {
-    color: #ffffff;
+    color: var(--whight);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
     padding-bottom: 10px;
+    position: relative;
 }
-.stays:hover,.attractions:hover{
-    border-bottom: 4px solid #F5BD41;
+/*.stays:hover,.attractions:hover{
+    position: absolute;
+    border-bottom: 4px solid var(--yellow);
     cursor: pointer;
+    margin: -18px -20px;
+}*/
+.stays:after{
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    height: 4px; /*задаём ширину линии*/
+    background-color: var(--yellow); /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out; /*задаём время анимации*/
+
+}
+
+.stays:hover:after,
+.stays:focus:after{
+    cursor: pointer;
+    margin: 8px 3px;
+    width: 90%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }
 .attractions {
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
+    color: var(--whight);
     font-weight: 400;
     font-size: 24px;
-    line-height: 28px;
-    width: 108px;
-    height: 28px;
     padding-bottom: 10px;
-    margin-right: 30px;
-    margin-left: 10px;
+    position: relative;
+}
+.attractions:after {
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    height: 4px; /*задаём ширину линии*/
+    background-color: var(--yellow); /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out; /*задаём время анимации*/
+
+}
+
+.attractions:hover:after,
+.attractions:focus:after {
+    cursor: pointer;
+    margin: 8px 1px;
+    width: 90%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }
 
 .home {
@@ -89,7 +130,6 @@ body{
 .disc {
     display: flex;
     margin-top: 200px;
-    margin-left: 105px;
     width: 540px;
     height: 120px;
 
@@ -106,13 +146,13 @@ body{
     font-weight: 500;
     font-size: 50px;
     line-height: 60px;
-    color: #ffffff;
+    color: var(--whight);
 }
 
 .section {
     display: flex;
     margin-top: 100px;
-    margin-left: 130px;
+    margin-left: 24px;
     flex-direction: row;
     gap: 220px;
     height: 20px;
@@ -127,7 +167,7 @@ body{
 
 }
 
-.check {
+.checking {
     display: flex;
     flex-direction: row;
     width: 185px;
@@ -136,7 +176,7 @@ body{
 
 .info {
     flex-direction: row;
-    color: #ffffff;
+    color: var(--whight);
     text-align: end;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -151,14 +191,23 @@ body{
     flex-direction: row;
     height: 65px;
     width: 100%;
-    margin-left: 105px;
     margin-right: 105px;
     border-radius: 8px;
     border: medium;
+    background-color: var(--whight);
 }
 .city {
+    display: flex;
+    flex-direction: row;
     width: 470px;
     height: 65px;
+    border: medium;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: var(--whight);
+    padding: 15px;
+}
+.hotel{
     text-align: left;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -166,8 +215,11 @@ body{
     font-size: 18px;
     line-height: 21px;
     border: medium;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+}
+.finding {
+    display: none;
+    background-color: var(--whight);
+    border: medium;
 }
 .date {
     width: 260px;
@@ -178,10 +230,10 @@ body{
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    border-color: #FFFFFF;
+    border-color: var(--whight);
 }
 .date:hover{
-    border-color:#F5BD41;
+    border-color:var(--yellow);
     border-width: 3px;
     border-radius: 8px;
 }
@@ -217,7 +269,7 @@ body{
     width: 190px;
     height: 65px;
     text-align: center;
-    background: #3077C6;
+    background: var(--blue);
     border: medium;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
@@ -226,13 +278,13 @@ body{
 .sear {
     margin-top: 20px;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--whight);
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
-    background: #3077C6;
+    background: var(--blue);
     border: medium;
     border-radius: 8px;
 }
@@ -241,8 +293,7 @@ body{
     flex-direction: row;
     height: 40px;
     width: 270px;
-    margin-left: 585px;
-    margin-top: 120px;
+    margin: 120px auto;
 }
 
 .apple {
@@ -261,6 +312,8 @@ body{
 .container {
     margin: 0 auto;
     padding: 0 16px;
+    max-width:1230px;
+    width:100%;
 }
 .advantages{
     padding-top: 120px;
@@ -279,12 +332,33 @@ body{
     align-items: center;
     flex-direction: column;
 }
+.title-stroke :after{
+    display: block;
+    position: absolute;
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    height: 4px; /*задаём ширину линии*/
+    background-color: var(--yellow); /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out; /*задаём время анимации*/
+    left: 47%;
+    margin-top:20px;
+
+
+}
+
+.title-stroke :hover:after,
+.title-stroke :focus:after{
+    cursor: pointer;
+    margin-top:20px;
+    width: 100px; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+    left: 47%;
+}
 
 .stroke {
     margin-bottom: 100px;
     width: 100px;
     height: 4px;
-    background: #F5BD41;
+    background: var(--yellow);
     border: none;
 }
 
@@ -293,7 +367,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
     margin-left: -8px;
-    margin-right: -8px;
+    margin-right: -32px;
 }
 
 .col-1 {
@@ -305,6 +379,9 @@ body{
 }
 
 .col-3 {
+    width: 25%;
+}
+.col-3-homes-images{
     width: 25%;
 }
 
@@ -391,11 +468,181 @@ body{
 .-reviews{
     padding-top: 60px;
 }
+.homes{
+    min-height: 828px;
+    width: 100%;
+    background-color: var(--light-blue);
+    gap: 8px;
+    position: relative;
+}
+.homes-images{
+    width: 296px;
+    height: 296px;
+}
+.-guests{
+    padding-top: 120px;
+}
+.caption-title{
+    font-size: 24px;
+    font-weight: 400;
+    text-align:left;
+    color: var(--blue);
+    line-height: 28px;
+    margin-top: 24px;
+}
+.caption{
+    font-size: 24px;
+    font-weight: 400;
+    text-align:left;
+    color: var(--grey);
+    line-height: 28px;
+    margin-top: 24px;
+}
+.best-destinations{
+    width: 100%;
+    min-height: 1160px;
+    background-color: var(--whight);
+    background-size: cover;
+    position: relative;
+}
+.tabs{
+    display: flex;
+    flex-direction: row;
+    width: 623px;
+    height: 64px;
+    background-color: var(--light-grey);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 104px;
+}
+.regions{
+    width: 192px;
+    height: 64px;
+    border-radius: 8px;
+    padding-top: 17px;
+    color: var(--black)
+}
+.regions:active, .cities:active,.places-of-interest:active{
+    background-color: var(--blue) ;
+    color: var(--whight);
+}
+.regions-text{
+    color: var(--black);
+}
+.regions-text:active{
+    color: var(--whight);
+}
+.cities{
+    width: 192px;
+    height: 64px;
+    border-radius: 8px;
+    padding-top: 17px;
+}
+.places-of-interest{
+    width: 239px;
+    height: 64px;
+    border-radius: 8px;
+    padding-top: 17px;
+}
+.sign-up{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    background-color: var(--light-blue);
+    width: 1232px;
+    margin-top: 210px;
+}
+.sign-up-info-app{
+    display: none;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 51px;
+    margin-bottom: 21px;
+}
+.users{
+    margin: 57px 24px;
+    width: 86px;
+    height: 86px;
+}
+.user{
+    width: 86px;
+    height: 86px;
+}
+.sign-up-button{
+    width: 128px;
+    height: 48px;
+    border-radius: 8px;
+    color: var(--blue);
+    border-color: var(--blue);
+    border-width: 1px;
+    background-color: var(--whight);
+}
+.sign-up-info{
+    text-align: left;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 51px;
+    margin-bottom: 21px;
+}
+
+.close{
+    display: none;
+}
+.sign-up-logo{
+    display: none;
+}
+.cursor-1{
+    display: flex;
+    position: absolute;
+    top:50%;
+    left:92.5%;
+}
+.circle-1 {
+    width: 40px;
+    height: 40px;
+    background: var(--light-grey);
+    border-radius: 20px;
+    box-shadow: 1px 6px 4px var(--grey);
+}
+.cursor{
+    display: flex;
+    position: absolute;
+    bottom:25%;
+    left: 50%;
+}
+.circle {
+    width: 40px;
+    height: 40px;
+    background: var(--light-grey);
+    border-radius: 20px;
+    box-shadow: 1px 6px 4px var(--grey);
+}
+i {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    border-bottom-right-radius: 3px;
+
+}
+.arrow-right{
+    transform: rotate(-45deg);
+    margin: 13px 10px;
+}
+.arrow-down {
+    transform: rotate(45deg);
+    margin: 10px 14px;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
-    background: #10367C;
+    background: var(--dark-blue);
     align-items: flex-start;
+    background-size: cover;
 }
 
 .content {
@@ -420,32 +667,50 @@ body{
 }
 
 .end {display: flex;
-    align-content: center;
     line-height: 23px;
-    color: #FFFFFF;
+    color: var(--whight);
     margin-top: 160px;
     padding-left: 105px;
+    text-align: left;
 }
 
 .footer__style-second {
     font-weight: 400;
     font-size: 20px;
     line-height: 43px;
-    color: #FFFFFF;
+    color: var(--whight);
 }
 
 .footer__style-first{
     font-weight: 500;
     font-size: 20px;
     line-height: 43px;
-    color: #FFFFFF;
+    color: var(--whight);
 }
 
-.footer__style-end {
+.style-end {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #FFFFFF;
+    color: var(--whight);
+}
+@media (max-width: 1024px) {
+    /* For tablet: */
+    .inputs {
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        height: 540px;
+        width: 726px;
+        border-radius: 0px;
+        border: medium;
+        background-color: var(--yellow);
+        gap: 8px;
+        padding: 8px;
+    }
+    .section{
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -453,8 +718,29 @@ body{
     [class*="col-"] {
         width: 100%;
     }
+    .top {
+        min-height: 540px;
+    }
+    .header {
+        padding-top: 12px;
+    }
+    .header-links{
+        width: 96px;
+        margin-right: 0;
+        justify-content: end;
+        gap:16px;
+    }
     .attractions {
         display: none;
+    }
+    .home {
+        width: 24px;
+        height: 24px;
+        margin-left: 0;
+    }
+    .light {
+        height: 16px;
+        width: 16px;
     }
     .stays{
         display: none;
@@ -469,10 +755,10 @@ body{
         display: flex;
         flex-direction: column;
         height: 240px;
-        width: 330px;
+        width: 326px;
         border-radius: 0px;
         border: medium;
-        background-color: #F5BD41;
+        background-color:var(--yellow);
         gap: 8px;
         padding: 8px;
     }
@@ -485,6 +771,11 @@ body{
         line-height: 21px;
         border: medium;
         border-radius: 8px;
+    }
+    .finding{
+        display: flex;
+        width: 16px;
+        height: 16px;
     }
     .date {
         display: none;
@@ -520,7 +811,7 @@ body{
         font-weight: 500;
         font-size: 15px;
         line-height: 14px;
-        background-color: #FFFFFF;
+        background-color: var(--whight);
         border: medium;
         border-radius: 8px;
     }
@@ -529,7 +820,7 @@ body{
         width: 104px;
         height: 40px;
         border-width: 5px;
-        border-right: #BFBFBF;
+        border-right: var(--grey);
     }
     .children{
         display: flex;
@@ -540,7 +831,7 @@ body{
         display: flex;
         width: 104px;
         height: 40px;
-        border-left: #BFBFBF;
+        border-left: var(--grey);
         border-width: 5px;
     }
     .info{
@@ -551,13 +842,12 @@ body{
         justify-content: center;
         margin: 0 auto;
     }
-    .header-links{
-        margin-right: 15px;
-    }
     .section{
         display: none;
     }
     .disc{
+        width: 328px;
+        height: 70px;
         margin-top: 50px;
     }
     .col-5{
@@ -572,7 +862,7 @@ body{
         width: 310px;
         height: 50px;
         text-align: center;
-        background: #3077C6;
+        background: var(--blue);
         border: medium;
         border-radius: 8px;
     }
@@ -595,6 +885,23 @@ body{
     .review {
         margin-bottom: 0;
 
+    }
+    .homes-images{
+        width: 156px;
+        height: 156px;
+    }
+    .sign-up{
+        width: 100%;
+        height: 106px;
+    }
+    .close{
+        display: flex;
+        width: 16px;
+        height: 16px;
+        color: var(--grey);
+    }
+    .sign-up-logo{
+        display: flex;
     }
     .title{
         font-size: 28px;
@@ -662,8 +969,9 @@ body{
     .support{
         margin-left: 0;
     }
-    .footer__style-end {
+    .style-end {
         font-size: 12px;
+        margin: 0 auto;
     }
     .end {
         line-height: 23px;
@@ -677,6 +985,40 @@ body{
     .col-4.property{
         width: 25%;
     }
+    .col-3-homes-images{
+        width: 50%;
+    }
+    .homes{
+        max-height: 354px;}
+    .-berlin{
+        display: none;
+    }
+    .-slowakia{
+        display: none;
+    }
+    .-island{
+        display: none;
+    }
+    .-norway{
+        display: none;
+    }
+    .user{
+        display: none;
+    }
+    .sign-up-button{
+        display: none;
+    }
+    .sign-up-info-app{
+        display: flex;
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 39px;
+        margin-bottom: 39px;
+    }
+    .sign-up-info{
+        display: none;
+    }
+
     
 }
 
